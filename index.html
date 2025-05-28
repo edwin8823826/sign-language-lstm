@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Sign Language LSTM Demo</title>
+<head>
+  <meta charset="utf-8" />
+  <title>Sign Language LSTM Demo</title>
 
-    <!-- ✅ 只保留一次 p5.js -->
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
-    <!-- ✅ 若你需要聲音，可保留這行 -->
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/addons/p5.sound.min.js"></script>
+  <!-- ✅ 載入 p5.js 和 p5.sound -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/addons/p5.sound.min.js"></script>
 
-    <!-- ✅ 載入 TensorFlow.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.18.0/dist/tf.min.js"></script>
+  <!-- ✅ 載入 TensorFlow.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.18.0/dist/tf.min.js"></script>
 
-    <!-- ✅ 載入你的 sketch -->
-    <script src="sketch.js"></script>
+  <!-- ✅ 載入樣式（可省略） -->
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <!-- 你可以加入 <main> 或 <div id="container">，p5.js 不強制需要 -->
+  <main></main>
 
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <main></main>
-  </body>
+  <!-- ✅ 最後載入 sketch.js -->
+  <script src="sketch.js"></script>
+</body>
 </html>
