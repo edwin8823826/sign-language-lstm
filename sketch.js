@@ -10,7 +10,7 @@ async function setup() {
   video.hide();
 
   // 載入模型
-  lstmmodel = await tf.loadLayersModel('model1_tfjs/model.json');
+  lstmmodel = await tf.loadLayersModel('model.json');
   console.log('✅ 模型載入完成');
 
   // 測試假資料
