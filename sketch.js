@@ -13,20 +13,23 @@ async function setup() {
   lstmmodel = await tf.loadLayersModel('model1_tfjs/model.json');
   console.log('✅ 模型載入完成');
 
-  // 測試假資料推論
-  let testInput = tf.zeros([1, 30, 258]); // 注意：你的模型輸入是 [1, 30, 258]
+  // 測試假資料
+  let testInput = tf.zeros([1, 30, 258]); // 確保 shape 正確
   let result = lstmmodel.predict(testInput);
-  result.print(); // ➜ 確認輸出 shape 是否符合預期
+  result.print(); // 可印出張量資訊
+  result.array().then(arr => console.log("模型預測結果：", arr));
 }
 
 function draw() {
   background(220);
-  image(video, 0, 0); // 顯示鏡頭畫面
+  image(video, 0, 0);
 
   if (!lstmmodel) {
-    text('載入中...', width / 2, height / 2);
+    textSize(24);
+    fill(0);
+    text('載入中...', width / 2 - 50, height / 2);
     return;
   }
 
-  // 可以在這裡接 MediaPipe 特徵後 ➜ predict()
+  // 這裡可加入 MediaPipe 特徵擷取後用 model.predict()
 }
